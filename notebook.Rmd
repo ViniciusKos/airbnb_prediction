@@ -1,0 +1,32 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# 0.0 Imports
+
+```{r}
+library(dplyr)
+library(magrittr)
+```
+
+# 0.1 Load df0
+```{r}
+df0 = read.csv( file ="data/train_users_2.csv" )
+print( dim(df0))
+head( df0 )
+```
+
+
+```{r}
+sessions = read.csv( "data/sessions.csv" )
+print( dim(sessions) )
+head(sessions)
+```
+#  1.0 Descriptive Analysis
+```{r}
+summary(df0)
+```
+```{r}
+
+```
