@@ -8,20 +8,18 @@ library(magrittr)
 
 ## 0.2 Loading df0
 
-df0 = read.csv( file ="train_users_2.csv" )
+df0 = read.csv( file ="data/train_users_2.csv" )
 head( df0 )
 dim( df0 )
 
 ## sessions
-sessions = read.csv( "sessions.csv" )
+sessions = read.csv( "data/sessions.csv" )
+
+#inspect sessions
+head( sessions )
+dim( sessions )
 
 
-
-
-# install.packages("dplyr")
-# install.packages("magrittr")
-# 
-# library(magrittr)
-# library(dplyr)
+str(df0)
 
 

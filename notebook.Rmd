@@ -4,29 +4,57 @@ output: html_notebook
 ---
 
 # 0.0 Imports
+```{r}
+install.packages("lubridate")
+```
 
 ```{r}
 library(dplyr)
 library(magrittr)
+library(lubridate)
 ```
 
-# 0.1 Load df0
+##0.1 Load df0
 ```{r}
 df0 = read.csv( file ="data/train_users_2.csv" )
 print( dim(df0))
 head( df0 )
 ```
 
-
 ```{r}
 sessions = read.csv( "data/sessions.csv" )
 print( dim(sessions) )
-head(sessions)
 ```
-#  1.0 Descriptive Analysis
+
+
 ```{r}
-summary(df0)
+head(sessions) 
 ```
+#1.0 Descriptive Analysis
 ```{r}
+df1 <- data.frame(df0)
+summary(df1)
+```
+## 1.1 Check data types
+
+
+```{r}
+class(str(df1))
+```
+
+## 1.2 Check NA
+```{r}
+colSums(is.na(df0))
+```
+
+## 1.3 Change data type
+```{r}
+df1$timestamp_first_active <- ymd_hms(df1$timestamp_first_active, tz = "UTC")
+
+```
+## 1.4 Drop NAs and filter dataset
+
+```{r}
+head(df1)
 
 ```
