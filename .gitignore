@@ -27,6 +27,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 data/sessions.csv
+env_airbnb
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -55,6 +56,9 @@ coverage.xml
 # Translations
 *.mo
 *.pot
+.RData
+*data
+
 
 # Django stuff:
 *.log
